@@ -3,18 +3,19 @@ import Child1 from './Child1'
 import Child2 from './Child2'
 
 const Parent = () => {
-    let information= "xxxxxxxxxx"
-    const [value,setValue]= useState('')
-    const [childVal, setChildval]= useState('')
-    const updateChild= (update)=>{
-        setChildval(update)
-    }
+   
+    const [info,setInfo] = useState('')
+    
+    
   return (
     <div>
-        <input type="text" onChange={(e)=> setValue(e.target.value)} />
-        Parent: parentval-{value} and child-{childVal}
-        <Child1 info={value} childinfo={childVal} setVal={setChildval}/>
-        <Child2/>
+        
+        Parent: {}
+        <Child1 info={info} setInfo={setInfo}/>
+       A
+       B  
+       C 
+        <Child2 info={info}/>
     </div>
   )
 }
